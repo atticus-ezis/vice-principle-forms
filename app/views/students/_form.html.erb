@@ -1,0 +1,58 @@
+<%= form_with(model: student) do |form| %>
+  <% if student.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% student.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%# beginning of form %>
+
+  <div>
+    <h2>Status: <%= student.status ? "Complete" : "Incomplete" %></h2>
+  </div>
+  
+  <div>
+      <%= form.label :student_name, "Student Name" %><br>
+      <%= form.text_field :student_name %>
+  </div>
+
+  <div>
+    <%= form.label :parent_name, "Parent Name" %><br>
+    <%= form.text_field :parent_name %>
+  </div>  
+
+  <div>
+    <%= form.label :grade, "Grade" %><br>
+    <%= form.text_field :grade %>
+  </div>
+
+  <div>
+    <%= form.label :teachers, "Teachers" %><br>
+    <%= form.text_field :teachers %>
+  </div>
+
+  <div>
+    <%= form.label :sports, "Sports" %><br>
+    <%= form.text_field :sports %>
+  </div>
+
+  <div>
+    <%= form.label :form_name, "Form Name" %><br>
+    <%= form.text_field :form_name, placeholder: "Contact, Sports-Physical" %>
+  </div>
+
+  <div>
+    <%= form.label :form_file, "Upload Required Form(s)" %><br>
+    <%= form.file_field :form_files, multiple: true %>
+  </div>
+  
+  <div>
+    <%= form.submit "Save Changes" %>
+  </div>
+<% end %>

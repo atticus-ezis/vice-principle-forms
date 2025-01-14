@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  student_name: MyString
+  parent_name: MyString
+  grade: MyString
+  teachers: MyString
+  sports: MyString
+  form_name: MyString
+  status: false
+
+two:
+  student_name: MyString
+  parent_name: MyString
+  grade: MyString
+  teachers: MyString
+  sports: MyString
+  form_name: MyString
+  status: false
