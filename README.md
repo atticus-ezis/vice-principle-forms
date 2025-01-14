@@ -2,7 +2,7 @@
 
 Goal:
   This project allows users to update student records with required forms 
-  which changes their status from "COMPLETE" to "INCOMPLETE"
+  which changes their status from "INCOMPLETE" to "COMPLETE"
 
   ** Note if a sport is listed two files must be uploaded - 'Contact' and 'Sport-Physical' 
   The titles of these files must match exactly -- (files can be any format or name) ***
@@ -24,8 +24,8 @@ Steps:
            encoding: unicode
            pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
            url: <%= ENV['DATABASE_URL'] %> 
-    
-   5) verified my Neon database connection
+
+  5) verified my Neon database connection
         created “test_table” in Neon with mock data
         successfully accessed the records from a test_table in the rails console 
         ActiveRecord::Base.connection.execute(“SELECT * FROM test_table”).to_a
